@@ -11,7 +11,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default class ResponsiveAppBar extends Component {
 
-
     constructor(props) {
         super(props);
 
@@ -29,30 +28,50 @@ export default class ResponsiveAppBar extends Component {
             anchorReference: 'anchorEl',
 
         };
-        this.mark_locale = this.mark_locale.bind(this);
         this.handleMenu = this.handleMenu.bind(this);
         this.handleClose = this.handleClose.bind(this);
+
     }
+
 
     componentDidMount() {
-        this.mark_locale()
+        let path = window.location.href
+        let last_path = path.substring(path.lastIndexOf('/') + 1);
+
+        if (last_path) {
+            if (last_path === "resume") {
+                this.click_color_resume()
+            }
+            if (last_path === "portfolio") {
+                this.click_color_portfolio()
+            }
+            if (last_path === "contact") {
+                this.click_color_contact()
+            }
+        } else {
+            this.click_color_home()
+        }
+
     }
 
-    mark_locale() {
-        let url = window.location.pathname
-        if (url === '/') {
-            this.setState({opacity_home: 1})
-        }
-        if (url === '/resume') {
-            this.setState({opacity_resume: 1})
-        }
-        if (url === '/portfolio') {
-            this.setState({opacity_portfolio: 1})
-        }
-        if (url === '/contact') {
-            this.setState({opacity_contact: 1})
-        }
+    click_color_home() {
+        this.setState({opacity_home: 1})
     }
+
+    click_color_resume() {
+        this.setState({opacity_resume: 1})
+    }
+
+
+    click_color_portfolio() {
+        this.setState({opacity_portfolio: 1})
+    }
+
+
+    click_color_contact() {
+        this.setState({opacity_contact: 1})
+    }
+
 
     mouse_hover_color_home() {
         if (this.state.opacity_home !== 1) {
@@ -108,6 +127,7 @@ export default class ResponsiveAppBar extends Component {
         this.setState({anchorEl: event.currentTarget});
     };
 
+
     handleClose = () => {
         this.setState({anchorEl: null});
     };
@@ -146,27 +166,27 @@ export default class ResponsiveAppBar extends Component {
                             >
 
                                 <MenuItem
-                                    href="/"
+                                    href="/amportfolio/#/"
                                     component="a"
                                     onClick={this.handleClose}
                                 > HOME </MenuItem>
 
                                 <MenuItem
-                                    href="/resume"
+                                    href="/amportfolio/#/resume"
                                     component="a"
                                     onClick={this.handleClose}
                                 > RESUME </MenuItem>
 
 
                                 <MenuItem
-                                    href="/portfolio"
+                                    href="/amportfolio/#/portfolio"
                                     component="a"
                                     onClick={this.handleClose}
                                 > PORTOLIO </MenuItem>
 
 
                                 <MenuItem
-                                    href="/contact"
+                                    href="/amportfolio/#/contact"
                                     component="a"
                                     onClick={this.handleClose}
                                 > CONTACT </MenuItem>
@@ -180,7 +200,7 @@ export default class ResponsiveAppBar extends Component {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="/"
+                            href="/amportfolio/#/"
                             onMouseEnter={() => this.mouse_hover_color_home()}
                             onMouseLeave={() => this.mouse_leave_color_home()}
                             sx={{
@@ -202,7 +222,7 @@ export default class ResponsiveAppBar extends Component {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="/resume"
+                            href="/amportfolio/#/resume"
                             onMouseEnter={() => this.mouse_hover_color_resume()}
                             onMouseLeave={() => this.mouse_leave_color_resume()}
                             sx={{
@@ -224,7 +244,7 @@ export default class ResponsiveAppBar extends Component {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="/portfolio"
+                            href="/amportfolio/#/portfolio"
                             onMouseEnter={() => this.mouse_hover_color_portfolio()}
                             onMouseLeave={() => this.mouse_leave_color_portfolio()}
                             sx={{
@@ -246,7 +266,7 @@ export default class ResponsiveAppBar extends Component {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="/contact"
+                            href="/amportfolio/#/contact"
                             onMouseEnter={() => this.mouse_hover_color_contact()}
                             onMouseLeave={() => this.mouse_leave_color_contact()}
                             sx={{

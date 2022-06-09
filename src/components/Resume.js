@@ -2,6 +2,7 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -111,139 +112,142 @@ const useStyles = makeStyles((theme) => ({
 
 const Resume = () => {
     const classes = useStyles();
-    return (
-        <Box component="header" className={classes.mainContainer}>
-            <Typography variant="h4" align="center" className={classes.heading}>
-                Working Experience
-            </Typography>
-            <Box component="div" className={classes.timeLine}>
-                <Typography
-                    variant="h2"
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-                >
-                    2017
+    return (<div>
+            <Navbar/>
+
+            <Box component="header" className={classes.mainContainer}>
+                <Typography variant="h4" align="center" className={classes.heading}>
+                    Working Experience
                 </Typography>
-                <Box component="div" className={classes.timeLineItem}>
+                <Box component="div" className={classes.timeLine}>
                     <Typography
-                        variant="h5"
-                        align="center"
-                        className={classes.subHeading}
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
                     >
-                        html & css
+                        2017
                     </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography
+                            variant="h5"
+                            align="center"
+                            className={classes.subHeading}
+                        >
+                            html & css
+                        </Typography>
+
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            className={classes.subtitle1}
+                        >
+                            My first web project was developed using only html, css and sql.
+                            It was just a landpage with product images.
+                        </Typography>
+                    </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2018
+                    </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography
+                            variant="h5"
+                            align="center"
+                            className={classes.subHeading}
+                        >
+                            React FrontEnd
+                        </Typography>
+
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            className={classes.subtitle1}
+                        >
+                            Needing more, I started the front end studies with react,
+                            where I developed personal web systems.
+                        </Typography>
+                    </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2019
+                    </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography
+                            variant="h5"
+                            align="center"
+                            className={classes.subHeading}
+                        >
+                            Fullstack Javascript
+                        </Typography>
+
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            className={classes.subtitle1}
+                        >
+                            I started working as an intern for a large technology company,
+                            where we provided services to large clients such as the Brazilian army.
+                            There I worked with React and Node Js, being full stack in JavaScript.
+                        </Typography>
+                    </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2020
+                    </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography
+                            variant="h5"
+                            align="center"
+                            className={classes.subHeading}
+                        >
+                            Spring & Angular
+                        </Typography>
+
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            className={classes.subtitle1}
+                        >
+                            In this same company we changed our technologies to angular and spring boot,
+                            where I worked with javascript in the FrontEnd and java in the BackEnd.
+                        </Typography>
+                    </Box>
 
                     <Typography
-                        variant="subtitle1"
-                        align="center"
-                        className={classes.subtitle1}
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
                     >
-                        My first web project was developed using only html, css and sql.
-                        It was just a landpage with product images.
+                        2021
                     </Typography>
+
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography
+                            variant="h5"
+                            align="center"
+                            className={classes.subHeading}
+                        >
+                            Django & React
+                        </Typography>
+
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            className={classes.subtitle1}
+                        >
+                            I started to study Django and I liked it a lot,
+                            developed my college graduation project in Django and React.
+                        </Typography>
+                    </Box>
+
+
                 </Box>
-                <Typography
-                    variant="h2"
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-                >
-                    2018
-                </Typography>
-                <Box component="div" className={classes.timeLineItem}>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                        className={classes.subHeading}
-                    >
-                        React FrontEnd
-                    </Typography>
-
-                    <Typography
-                        variant="subtitle1"
-                        align="center"
-                        className={classes.subtitle1}
-                    >
-                        Needing more, I started the front end studies with react,
-                        where I developed personal web systems.
-                    </Typography>
-                </Box>
-                <Typography
-                    variant="h2"
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-                >
-                    2019
-                </Typography>
-                <Box component="div" className={classes.timeLineItem}>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                        className={classes.subHeading}
-                    >
-                        Fullstack Javascript
-                    </Typography>
-
-                    <Typography
-                        variant="subtitle1"
-                        align="center"
-                        className={classes.subtitle1}
-                    >
-                        I started working as an intern for a large technology company,
-                        where we provided services to large clients such as the Brazilian army.
-                        There I worked with React and Node Js, being full stack in JavaScript.
-                    </Typography>
-                </Box>
-                <Typography
-                    variant="h2"
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-                >
-                    2020
-                </Typography>
-                <Box component="div" className={classes.timeLineItem}>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                        className={classes.subHeading}
-                    >
-                        Spring & Angular
-                    </Typography>
-
-                    <Typography
-                        variant="subtitle1"
-                        align="center"
-                        className={classes.subtitle1}
-                    >
-                        In this same company we changed our technologies to angular and spring boot,
-                        where I worked with javascript in the FrontEnd and java in the BackEnd.
-                    </Typography>
-                </Box>
-
-                <Typography
-                    variant="h2"
-                    className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-                >
-                    2021
-                </Typography>
-
-                <Box component="div" className={classes.timeLineItem}>
-                    <Typography
-                        variant="h5"
-                        align="center"
-                        className={classes.subHeading}
-                    >
-                        Django & React
-                    </Typography>
-
-                    <Typography
-                        variant="subtitle1"
-                        align="center"
-                        className={classes.subtitle1}
-                    >
-                        I started to study Django and I liked it a lot,
-                        developed my college graduation project in Django and React.
-                    </Typography>
-                </Box>
-
-
             </Box>
-        </Box>
+        </div>
     );
 };
 

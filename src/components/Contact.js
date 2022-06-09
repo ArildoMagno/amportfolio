@@ -6,6 +6,7 @@ import {GitHub, LinkedIn} from "@material-ui/icons";
 import Button from "@material-ui/core/Button";
 import Instagram from "@material-ui/icons/Instagram";
 import ContactMeText from "./ContactMeText";
+import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
     contactContainer: {
@@ -65,56 +66,58 @@ const Contact = () => {
 
     const classes = useStyles();
     return (
-        <Box component="div" className={classes.contactContainer}>
-            <Grid container justifyContent="center">
-                <Box component="form" className={classes.form}>
+        <div>
+            <Navbar/>
+            <Box component="div" className={classes.contactContainer}>
+                <Grid container justifyContent="center">
+                    <Box component="form" className={classes.form}>
 
-                    <ContactMeText/>
+                        <ContactMeText/>
 
-                    <Grid container className={classes.heading}></Grid>
+                        <Grid container className={classes.heading}></Grid>
 
-                    <Button
-                        variant="outlined"
-                        fullWidth={true}
-                        endIcon={<LinkedIn/>}
-                        className={classes.root}
-                        target="_blank"
-                        href="https://www.linkedin.com/in/arildo-magno-3a34a785/"
-                    >
-                        Linkedin
-                    </Button>
-
-
-                    <Button
-                        variant="outlined"
-                        fullWidth={true}
-                        endIcon={<GitHub/>}
-                        className={classes.root}
-                        target="_blank"
-                        href="https://github.com/ArildoMagno"
-                    >
-                        GitHub
-                    </Button>
+                        <Button
+                            variant="outlined"
+                            fullWidth={true}
+                            endIcon={<LinkedIn/>}
+                            className={classes.root}
+                            target="_blank"
+                            href="https://www.linkedin.com/in/arildo-magno-3a34a785/"
+                        >
+                            Linkedin
+                        </Button>
 
 
-                    <Button
-                        variant="outlined"
-                        fullWidth={true}
-                        endIcon={<Instagram/>}
-                        className={classes.root}
-                        target="_blank"
-                        href="https://www.instagram.com/arildomagno/"
-                    >
-                        Instagram
-                    </Button>
+                        <Button
+                            variant="outlined"
+                            fullWidth={true}
+                            endIcon={<GitHub/>}
+                            className={classes.root}
+                            target="_blank"
+                            href="https://github.com/ArildoMagno"
+                        >
+                            GitHub
+                        </Button>
 
 
-                </Box>
+                        <Button
+                            variant="outlined"
+                            fullWidth={true}
+                            endIcon={<Instagram/>}
+                            className={classes.root}
+                            target="_blank"
+                            href="https://www.instagram.com/arildomagno/"
+                        >
+                            Instagram
+                        </Button>
 
-            </Grid>
 
-        </Box>
+                    </Box>
 
+                </Grid>
+
+            </Box>
+        </div>
 
     );
 };

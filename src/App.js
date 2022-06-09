@@ -14,7 +14,6 @@ function App() {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/resume" component={Resume}/>
